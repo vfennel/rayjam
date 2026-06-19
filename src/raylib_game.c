@@ -49,8 +49,8 @@ typedef enum {
 //----------------------------------------------------------------------------------
 // Global Variables Definition
 //----------------------------------------------------------------------------------
-static const int screenWidth = 800;
-static const int screenHeight = 450;
+static const int screenWidth = 720;
+static const int screenHeight = 720;
 
 static RenderTexture2D target = { 0 };  // Render texture to render our game
 
@@ -72,7 +72,7 @@ int main(void)
 
     // Initialization
     //--------------------------------------------------------------------------------------
-    InitWindow(screenWidth, screenHeight, "raylib gamejam template");
+    InitWindow(screenWidth, screenHeight, "vincef rayjam game");
     
     // TODO: Load resources / Initialize variables at this point
     
@@ -122,11 +122,12 @@ void UpdateDrawFrame(void)
     // Render game screen to a texture, 
     // it could be useful for scaling or further shader postprocessing
     BeginTextureMode(target);
-        ClearBackground(RAYWHITE);
+        ClearBackground(DARKGRAY);
         
         // TODO: Draw your game screen here
-        DrawText("Welcome to raylib NEXT gamejam!", 150, 140, 30, BLACK);
-        DrawRectangleLinesEx((Rectangle){ 0, 0, screenWidth, screenHeight }, 16, BLACK);
+        DrawText("Welcome to raylib NEXT gamejam!", 150, 140, 30, RAYWHITE);
+        DrawText("Hold on to your butts!", 150, 180, 24, RAYWHITE);
+        DrawRectangleLinesEx((Rectangle){ 0, 0, screenWidth, screenHeight }, 16, YELLOW);
         
     EndTextureMode();
     
